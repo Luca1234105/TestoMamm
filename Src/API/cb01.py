@@ -32,7 +32,7 @@ if MX_PROXY == "1":
         }      
 if CB_PROXY == "1":
     PROXY_CREDENTIALS = env_vars.get('PROXY_CREDENTIALS')
-    proxy = random.choice(proxy_list)
+    proxy_list = json.loads(PROXY_CREDENTIALS)
     proxy = random.choice(proxy_list)
     if proxy == "":
         proxies = {}
